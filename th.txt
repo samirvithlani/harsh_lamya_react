@@ -1,0 +1,34 @@
+html --> js
+
+<div root>
+
+</div>
+
+
+root = documen.tge root ->
+
+userName = document.createELement('h1')
+userName.innerHtml = "ram"
+root.appendChild(userName)
+
+component: class based 
+function based :16.x
+
+
+
+DOM : document obj model:
+
+dom full obejct update
+
+dom : vdom:
+
+changes -> vdom --> compare -> og dom :
+
+state variable --> useState
+
+json array : id name age :
+
+
+generate: id ->1 to 1000
+name random generate :""
+age generate
