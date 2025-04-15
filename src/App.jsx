@@ -8,6 +8,12 @@ import { MapDemo } from "./components/MapDemo";
 import { UseStateDemo1 } from "./components/UseStateDemo1";
 import { UseStateDemo2 } from "./components/UseStateDemo2";
 import { UseStateDemo3 } from "./components/UseStateDemo3";
+import { Route, Routes } from "react-router-dom";
+import { IPL } from "./components/IPL/IPL";
+import { Navbar } from "./components/Navbar";
+import { Teams } from "./components/IPL/Teams";
+import { TeamDetail } from "./components/IPL/TeamDetail";
+import { Error404 } from "./components/Error404";
 
 function App() {
 
@@ -20,12 +26,18 @@ function App() {
   }
 
   return (
-    <div className="main-content">
-      <Header></Header>
-      {/* <UseStateDemo1></UseStateDemo1> */}
-      {/* <UseStateDemo2/> */}
-      <UseStateDemo3></UseStateDemo3>
-      {/* <Footer></Footer> */}
+    <div>
+      <Navbar></Navbar>
+      <Routes>
+        <Route path="/" element ={<IPL/>}></Route>
+        <Route path="/mapdemo" element = {<MapDemo/>}></Route>
+        <Route path="/ipl" element ={<IPL/>}></Route>
+        <Route path="/teams" element = {<Teams/>}></Route>
+        {/* <Route path="/teamdetail/:id" element ={<TeamDetail/>}></Route> */}
+        <Route path="/teams/teamdetail/:id" element ={<TeamDetail/>}></Route>
+        <Route path="/*" element={<Error404/>}></Route>
+      </Routes>
+      
     </div>
   );
 }

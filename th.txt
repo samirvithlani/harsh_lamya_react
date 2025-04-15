@@ -32,3 +32,26 @@ json array : id name age :
 generate: id ->1 to 1000
 name random generate :""
 age generate
+
+Single page application : index.html  : cust -->
+
+react-router-dom v 7.x
+<BrowserRouter> app routing enable..
+<Routes>
+    <Route>
+    <Route>
+    <Route>
+    <Route>
+    <Route>
+</routes>    
+
+Compneny:
+IPL --> Ipl.jsx -->
+
+NAVABAR>JSX
+app.js routes - route : 
+image assets/images/...
+ipl image 
+
+teams : team laod : click -->id
+teamDetail : fetch  : find..
