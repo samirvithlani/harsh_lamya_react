@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Navbar = () => {
+//props -->properties
+//props is readonly..
+export const Navbar = (props) => {
+  console.log("navbar props",props)
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         {/* Logo / Brand */}
-        <Link className="navbar-brand fw-bold" to="/">IPL Hub</Link>
+        <Link className="navbar-brand fw-bold" to="/">{props.appName} Hub</Link>
 
         {/* Toggle button for mobile */}
         <button
@@ -30,7 +33,7 @@ export const Navbar = () => {
               <Link className="nav-link" to="/teams">Teams</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Schedule</a>
+              <Link className="nav-link" to="/schedual">Schedule</Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Stats</a>

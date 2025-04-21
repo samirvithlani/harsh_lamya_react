@@ -14,20 +14,16 @@ import { Navbar } from "./components/Navbar";
 import { Teams } from "./components/IPL/Teams";
 import { TeamDetail } from "./components/IPL/TeamDetail";
 import { Error404 } from "./components/Error404";
+import { Schedual } from "./components/IPL/Schedual";
 
 function App() {
 
-  var userName ="ram"
-  var userAge = 24
-  var isActive= true
-  var user={
-    id:1,
-    name:"amit"
-  }
+  var appName = "IPL"
 
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar appName = {appName}></Navbar>
+
       <Routes>
         <Route path="/" element ={<IPL/>}></Route>
         <Route path="/mapdemo" element = {<MapDemo/>}></Route>
@@ -35,6 +31,7 @@ function App() {
         <Route path="/teams" element = {<Teams/>}></Route>
         {/* <Route path="/teamdetail/:id" element ={<TeamDetail/>}></Route> */}
         <Route path="/teams/teamdetail/:id" element ={<TeamDetail/>}></Route>
+        <Route path="/schedual" element = {<Schedual/>}></Route>
         <Route path="/*" element={<Error404/>}></Route>
       </Routes>
       

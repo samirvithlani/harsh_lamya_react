@@ -55,3 +55,15 @@ ipl image
 
 teams : team laod : click -->id
 teamDetail : fetch  : find..
+
+
+PROPS:
+
+component based arch:
+1 -->2 data --->
+PROPS : parent child comp -->
+a ->b ->c
+props drilling....
+context : parent all child -->
+
+redux : state management
