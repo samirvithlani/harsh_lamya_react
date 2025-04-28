@@ -67,3 +67,13 @@ props drilling....
 context : parent all child -->
 
 redux : state management
+
+handlSUbmit = (submitHandlet)=>{
+
+//data proce.. ...
+var data= {
+    name:"va....
+}
+cb(data)
+
+}
