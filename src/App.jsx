@@ -15,6 +15,7 @@ import { Teams } from "./components/IPL/Teams";
 import { TeamDetail } from "./components/IPL/TeamDetail";
 import { Error404 } from "./components/Error404";
 import { Schedual } from "./components/IPL/Schedual";
+import { FormDemo1 } from "./components/form/FormDemo1";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/teams/teamdetail/:id" element ={<TeamDetail/>}></Route>
         <Route path="/schedual" element = {<Schedual/>}></Route>
         <Route path="/*" element={<Error404/>}></Route>
+        <Route path ="/formdemo1" element = {<FormDemo1/>}></Route>
       </Routes>
       
     </div>

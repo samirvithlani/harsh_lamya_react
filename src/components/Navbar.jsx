@@ -41,6 +41,9 @@ export const Navbar = (props) => {
             <li className="nav-item">
               <a className="nav-link" href="#">About</a>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/formdemo1">Form Demo 1</Link>
+            </li>
           </ul>
         </div>
       </div>
