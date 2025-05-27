@@ -18,6 +18,7 @@ import { Schedual } from "./components/IPL/Schedual";
 import { FormDemo1 } from "./components/form/FormDemo1";
 import { FormDemo2 } from "./components/form/FormDemo2";
 import { FormDemo3 } from "./components/form/FormDemo3";
+import { FormDemo4 } from "./components/form/FormDemo4";
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/schedual" element = {<Schedual/>}></Route>
         <Route path="/*" element={<Error404/>}></Route>
         <Route path ="/formdemo1" element = {<FormDemo3/>}></Route>
+        <Route path = "/formdemo4" element = {<FormDemo4/>}></Route>
       </Routes>
       
     </div>
