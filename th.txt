@@ -89,3 +89,13 @@ cb(data)
                 message:"Age is required *"
             }
         }
+
+API :
+application programming interface
+fetch, axios
+
+useEffect: to hanlde side effect in react js we use useEffect:
+chat app :
+x --> y message
+
+component -> sideEf
