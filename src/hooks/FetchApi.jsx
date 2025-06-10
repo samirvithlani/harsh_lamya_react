@@ -21,7 +21,7 @@ export const useFetchApi=(url)=>{
         setloading(false)
 
     }
-    return {data,error,loading}
+    return {data,error,loading,callApi}
 
 
 }

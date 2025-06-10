@@ -2,8 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import {Header} from "./components/Header"
-import  Footer  from "./components/Footer";
+import { Header } from "./components/Header";
+import Footer from "./components/Footer";
 import { MapDemo } from "./components/MapDemo";
 import { UseStateDemo1 } from "./components/UseStateDemo1";
 import { UseStateDemo2 } from "./components/UseStateDemo2";
@@ -26,34 +26,46 @@ import { UseMemo3 } from "./components/UseMemo3";
 import { ApiDemo1 } from "./components/api/ApiDemo1";
 import { UseEffectDemo1 } from "./components/UseEffectDemo1";
 import { ApiDemo2 } from "./components/api/ApiDemo2";
+import { Slide, ToastContainer } from "react-toastify";
 
 function App() {
-
-  var appName = "IPL"
+  var appName = "IPL";
 
   return (
     <div>
-      <Navbar appName = {appName}></Navbar>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Slide}
+      />
+      <Navbar appName={appName}></Navbar>
 
       <Routes>
-        <Route path="/" element ={<IPL/>}></Route>
-        <Route path="/mapdemo" element = {<MapDemo/>}></Route>
-        <Route path="/ipl" element ={<IPL/>}></Route>
-        <Route path="/teams" element = {<Teams/>}></Route>
+        <Route path="/" element={<IPL />}></Route>
+        <Route path="/mapdemo" element={<MapDemo />}></Route>
+        <Route path="/ipl" element={<IPL />}></Route>
+        <Route path="/teams" element={<Teams />}></Route>
         {/* <Route path="/teamdetail/:id" element ={<TeamDetail/>}></Route> */}
-        <Route path="/teams/teamdetail/:id" element ={<TeamDetail/>}></Route>
-        <Route path="/schedual" element = {<Schedual/>}></Route>
-        <Route path="/*" element={<Error404/>}></Route>
-        <Route path ="/formdemo1" element = {<FormDemo3/>}></Route>
-        <Route path = "/formdemo4" element = {<FormDemo4/>}></Route>
-        <Route path = "/formdemo5" element = {<FormDemo5/>}></Route>
-        <Route path="/useMemo" element ={<UseMemoDemo1/>}></Route>
-        <Route path="/useMemo3" element ={<UseMemo3/>}></Route>
-        <Route path="/useeffectdemo1" element = {<UseEffectDemo1/>}></Route>
-        <Route path="/apidemo1" element = {<ApiDemo1/>}></Route>
-        <Route path="/apidemo2" element = {<ApiDemo2/>}></Route>
+        <Route path="/teams/teamdetail/:id" element={<TeamDetail />}></Route>
+        <Route path="/schedual" element={<Schedual />}></Route>
+        <Route path="/*" element={<Error404 />}></Route>
+        <Route path="/formdemo1" element={<FormDemo3 />}></Route>
+        <Route path="/formdemo4" element={<FormDemo4 />}></Route>
+        <Route path="/formdemo5" element={<FormDemo5 />}></Route>
+        <Route path="/useMemo" element={<UseMemoDemo1 />}></Route>
+        <Route path="/useMemo3" element={<UseMemo3 />}></Route>
+        <Route path="/useeffectdemo1" element={<UseEffectDemo1 />}></Route>
+        <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+        <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
       </Routes>
-      
     </div>
   );
 }
