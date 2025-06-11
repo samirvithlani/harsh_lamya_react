@@ -13,10 +13,10 @@ export const useFetchApi=(url)=>{
       
     }, [])
     
-    const callApi = async()=>{
+    const callApi = async(newUrl)=>{
 
         setloading(true)
-        const res = await axios.get(url)
+        const res = await axios.get(newUrl ? newUrl:url)
         setdata(res.data.data)
         setloading(false)
 

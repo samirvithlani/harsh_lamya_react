@@ -6,7 +6,7 @@ import { Slide, toast, ToastContainer } from "react-toastify";
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
   const [loading, setloading] = useState(false);
-  const getAPi = async () => {
+  const cls = async () => {
     setloading(true);
     const res = await axios.get("https://node5.onrender.com/user/user");
     console.log(res);
