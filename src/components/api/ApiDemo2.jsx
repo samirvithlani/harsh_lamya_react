@@ -4,6 +4,7 @@ import { Loader } from "../Loader";
 import { useFetchApi } from "../../hooks/FetchApi";
 import { toast } from "react-toastify";
 import { Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const ApiDemo2 = () => {
 const [show, setshow] = useState(false)
@@ -81,6 +82,7 @@ const [singleUser, setsingleUser] = useState({})
                   >
                     DETAIL
                   </button>
+                  <Link to={`/updateuser/${user._id}`} className="btn btn-info">UPDATE</Link>
                 </td>
               </tr>
             );

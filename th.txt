@@ -99,3 +99,6 @@ chat app :
 x --> y message
 
 component -> sideEf
+
+update --->new comp ->old display -->form -->edit -->update
+<Link>

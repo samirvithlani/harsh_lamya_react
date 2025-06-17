@@ -27,6 +27,9 @@ import { ApiDemo1 } from "./components/api/ApiDemo1";
 import { UseEffectDemo1 } from "./components/UseEffectDemo1";
 import { ApiDemo2 } from "./components/api/ApiDemo2";
 import { Slide, ToastContainer } from "react-toastify";
+import { AddUser } from "./components/api/AddUser";
+import { AddUserForm } from "./components/api/AddUserForm";
+import { UpdateUser } from "./components/api/UpdateUser";
 
 function App() {
   var appName = "IPL";
@@ -65,6 +68,9 @@ function App() {
         <Route path="/useeffectdemo1" element={<UseEffectDemo1 />}></Route>
         <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
         <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+        <Route path="/adduser" element = {<AddUser/>}></Route>
+        <Route path="/adduserform" element = {<AddUserForm/>}></Route>
+        <Route path="/updateuser/:id" element = {<UpdateUser/>}></Route>
       </Routes>
     </div>
   );
