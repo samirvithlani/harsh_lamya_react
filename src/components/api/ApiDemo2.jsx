@@ -52,6 +52,7 @@ const [singleUser, setsingleUser] = useState({})
             <th>AGE</th>
             <th>EMAIL</th>
             <th>STATUS</th>
+            <th>password</th>
             <th>ACTION</th>
           </tr>
         </thead>
@@ -63,6 +64,7 @@ const [singleUser, setsingleUser] = useState({})
                 <td>{user.name}</td>
                 <td>{user.age}</td>
                 <td>{user.email}</td>
+                <td>{user.password ? user.password :"NA"}</td>
                 <td>{user.isActive ? "ACTIVE" : "NOt active"}</td>
                 <td>
                   <button

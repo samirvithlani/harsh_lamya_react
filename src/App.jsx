@@ -30,6 +30,9 @@ import { Slide, ToastContainer } from "react-toastify";
 import { AddUser } from "./components/api/AddUser";
 import { AddUserForm } from "./components/api/AddUserForm";
 import { UpdateUser } from "./components/api/UpdateUser";
+import { Login } from "./components/Login";
+import ProtectedRoutes from "./hooks/ProtectedRoutes";
+import { ApiDemo3 } from "./components/api/ApiDemo3";
 
 function App() {
   var appName = "IPL";
@@ -52,6 +55,8 @@ function App() {
       <Navbar appName={appName}></Navbar>
 
       <Routes>
+        <Route element={<ProtectedRoutes/>}>
+
         <Route path="/" element={<IPL />}></Route>
         <Route path="/mapdemo" element={<MapDemo />}></Route>
         <Route path="/ipl" element={<IPL />}></Route>
@@ -67,10 +72,14 @@ function App() {
         <Route path="/useMemo3" element={<UseMemo3 />}></Route>
         <Route path="/useeffectdemo1" element={<UseEffectDemo1 />}></Route>
         <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
-        <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+        <Route path="/apidemo2" element={<ApiDemo3 />}></Route>
         <Route path="/adduser" element = {<AddUser/>}></Route>
         <Route path="/adduserform" element = {<AddUserForm/>}></Route>
         <Route path="/updateuser/:id" element = {<UpdateUser/>}></Route>
+
+        </Route>
+
+        <Route path="/login" element = {<Login/>}></Route>
       </Routes>
     </div>
   );
