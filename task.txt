@@ -1,0 +1,24 @@
+omdb -> api key -->
+
+1)search movie by title : input avtar ->submit -->
+http://www.omdbapi.com/?t=titanic&apikey=your key
+IMDB ID : 1234567890
+[1][][][][]
+[][][][][]
+[][][][][]
+
+[1]-->movie detail--->params imbd id -->useParams()
+http://www.omdbapi.com/?i=tt3896198&apikey=your key
+
+
+
+https://node5.onrender.com/product/getall
+https://node5.onrender.com/product/addproducts : product array post
+ {
+      "colors": [],
+      "isAvailable": true,
+      "unit": 0,
+      "name": "ipad mini",
+      "price": 20000,
+      "description": "Na levai",      
+},

@@ -33,6 +33,7 @@ import { UpdateUser } from "./components/api/UpdateUser";
 import { Login } from "./components/Login";
 import ProtectedRoutes from "./hooks/ProtectedRoutes";
 import { ApiDemo3 } from "./components/api/ApiDemo3";
+import { Products } from "./components/Products";
 
 function App() {
   var appName = "IPL";
@@ -78,6 +79,7 @@ function App() {
         <Route path="/updateuser/:id" element = {<UpdateUser/>}></Route>
 
         </Route>
+        <Route path="/products" element={<Products/>}></Route>
 
         <Route path="/login" element = {<Login/>}></Route>
       </Routes>

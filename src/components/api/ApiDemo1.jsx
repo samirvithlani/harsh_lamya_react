@@ -6,9 +6,9 @@ import { Slide, toast, ToastContainer } from "react-toastify";
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
   const [loading, setloading] = useState(false);
-  const cls = async () => {
+  const getAPi = async () => {
     setloading(true);
-    const res = await axios.get("https://node5.onrender.com/user/user");
+    const res = await axios.get("https://www.omdbapi.com/?s=avatar&apikey=9d57be0b");
     console.log(res);
     console.log(res.data);
     console.log(res.data.message);

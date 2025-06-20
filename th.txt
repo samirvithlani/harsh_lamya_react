@@ -64,7 +64,15 @@ component based arch:
 PROPS : parent child comp -->
 a ->b ->c
 props drilling....
+a-->b-->c
+
 context : parent all child -->
+a-->b -->c --->d
+
+a ->globle object provider...
+child component --> globle object data subscribe(use)
+
+
 
 redux : state management
 
@@ -102,3 +110,5 @@ component -> sideEf
 
 update --->new comp ->old display -->form -->edit -->update
 <Link>
+
+
