@@ -1,0 +1,28 @@
+node:
+react:
+
+AI Driven app:
+doctor 
+paitent register
+
+pai... reports submit: Form fill
+
+Pregnancies,
+Glucose,
+BloodPressure,
+SkinThickness,
+Insulin,
+BMI,
+DiabetesPedigreeFunction,
+Age,
+
+db store date:--> submit --->prob:
+
+node  :
+react :
+--------
+auth : doctor
+     : paitent 
+     : detail
+     : prediction	
+	

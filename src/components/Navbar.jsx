@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../ThemeContext';
 
 //props -->properties
 //props is readonly..
 export const Navbar = (props) => {
+  const [value, setValue] = useState([1, 3]);
+  const handleChange = (val) => setValue(val);
+  const {theme,settheme} = useContext(ThemeContext)
+
   console.log("navbar props",props)
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
+        <button onClick={()=>{settheme(theme =="dark"?"light":"dark")}}>{theme=="dark"?"light":"dark"}</button>
         {/* Logo / Brand */}
         <Link className="navbar-brand fw-bold" to="/">{props.appName} Hub</Link>
 

@@ -34,55 +34,71 @@ import { Login } from "./components/Login";
 import ProtectedRoutes from "./hooks/ProtectedRoutes";
 import { ApiDemo3 } from "./components/api/ApiDemo3";
 import { Products } from "./components/Products";
+import { ThemeContext } from "./ThemeContext";
 
 function App() {
   var appName = "IPL";
+  const [theme, settheme] = useState("light");
 
   return (
     <div>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-        transition={Slide}
-      />
-      <Navbar appName={appName}></Navbar>
+      <ThemeContext.Provider value={{ theme, settheme }}>
+        <div
+        
+          style={{
+            backgroundColor: theme == "dark" ? "black" : "white",
+            color: theme == "dark" ? "white" : "black",
+          }}
+        >
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            transition={Slide}
+          />
+          <Navbar appName={appName}></Navbar>
 
-      <Routes>
-        <Route element={<ProtectedRoutes/>}>
+          <Routes>
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/" element={<IPL />}></Route>
+              <Route path="/mapdemo" element={<MapDemo />}></Route>
+              <Route path="/ipl" element={<IPL />}></Route>
+              <Route path="/teams" element={<Teams />}></Route>
+              {/* <Route path="/teamdetail/:id" element ={<TeamDetail/>}></Route> */}
+              <Route
+                path="/teams/teamdetail/:id"
+                element={<TeamDetail />}
+              ></Route>
+              <Route path="/schedual" element={<Schedual />}></Route>
+              <Route path="/*" element={<Error404 />}></Route>
+              <Route path="/formdemo1" element={<FormDemo3 />}></Route>
+              <Route path="/formdemo4" element={<FormDemo4 />}></Route>
+              <Route path="/formdemo5" element={<FormDemo5 />}></Route>
+              <Route path="/useMemo" element={<UseMemoDemo1 />}></Route>
+              <Route path="/useMemo3" element={<UseMemo3 />}></Route>
+              <Route
+                path="/useeffectdemo1"
+                element={<UseEffectDemo1 />}
+              ></Route>
+              <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+              <Route path="/apidemo2" element={<ApiDemo3 />}></Route>
+              <Route path="/adduser" element={<AddUser />}></Route>
+              <Route path="/adduserform" element={<AddUserForm />}></Route>
+              <Route path="/updateuser/:id" element={<UpdateUser />}></Route>
+            </Route>
+            <Route path="/products" element={<Products />}></Route>
 
-        <Route path="/" element={<IPL />}></Route>
-        <Route path="/mapdemo" element={<MapDemo />}></Route>
-        <Route path="/ipl" element={<IPL />}></Route>
-        <Route path="/teams" element={<Teams />}></Route>
-        {/* <Route path="/teamdetail/:id" element ={<TeamDetail/>}></Route> */}
-        <Route path="/teams/teamdetail/:id" element={<TeamDetail />}></Route>
-        <Route path="/schedual" element={<Schedual />}></Route>
-        <Route path="/*" element={<Error404 />}></Route>
-        <Route path="/formdemo1" element={<FormDemo3 />}></Route>
-        <Route path="/formdemo4" element={<FormDemo4 />}></Route>
-        <Route path="/formdemo5" element={<FormDemo5 />}></Route>
-        <Route path="/useMemo" element={<UseMemoDemo1 />}></Route>
-        <Route path="/useMemo3" element={<UseMemo3 />}></Route>
-        <Route path="/useeffectdemo1" element={<UseEffectDemo1 />}></Route>
-        <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
-        <Route path="/apidemo2" element={<ApiDemo3 />}></Route>
-        <Route path="/adduser" element = {<AddUser/>}></Route>
-        <Route path="/adduserform" element = {<AddUserForm/>}></Route>
-        <Route path="/updateuser/:id" element = {<UpdateUser/>}></Route>
-
-        </Route>
-        <Route path="/products" element={<Products/>}></Route>
-
-        <Route path="/login" element = {<Login/>}></Route>
-      </Routes>
+            <Route path="/login" element={<Login />}></Route>
+          </Routes>
+        </div>
+      </ThemeContext.Provider>
     </div>
   );
 }
