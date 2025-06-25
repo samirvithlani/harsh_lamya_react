@@ -35,6 +35,7 @@ import ProtectedRoutes from "./hooks/ProtectedRoutes";
 import { ApiDemo3 } from "./components/api/ApiDemo3";
 import { Products } from "./components/Products";
 import { ThemeContext } from "./ThemeContext";
+import { ProductComp } from "./components/ProductComp";
 
 function App() {
   var appName = "IPL";
@@ -93,7 +94,7 @@ function App() {
               <Route path="/adduserform" element={<AddUserForm />}></Route>
               <Route path="/updateuser/:id" element={<UpdateUser />}></Route>
             </Route>
-            <Route path="/products" element={<Products />}></Route>
+            <Route path="/products" element={<ProductComp />}></Route>
 
             <Route path="/login" element={<Login />}></Route>
           </Routes>

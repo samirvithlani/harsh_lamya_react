@@ -112,3 +112,13 @@ update --->new comp ->old display -->form -->edit -->update
 <Link>
 
 
+
+redux:
+pqrops,context,redux
+
+content management tool
+
+store: object
+reducer: reducer is pure js funciton which accept function as object and return previous state
+action : js function which accept 2 params 
+
