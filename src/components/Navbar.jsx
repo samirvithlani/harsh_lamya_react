@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../ThemeContext';
+import { useSelector } from 'react-redux';
 
 //props -->properties
 //props is readonly..
@@ -9,6 +10,12 @@ export const Navbar = (props) => {
   const [value, setValue] = useState([1, 3]);
   const handleChange = (val) => setValue(val);
   const {theme,settheme} = useContext(ThemeContext)
+
+  const cartstate = useSelector((state)=>state.cart.cart) //[]
+  const bankState = useSelector((state)=>state.bank.balance)
+  
+
+
 
   console.log("navbar props",props)
   return (
@@ -39,7 +46,7 @@ export const Navbar = (props) => {
               {/* <a className="nav-link" href="/teams">Teams</a> */}
               <Link className="nav-link" to="/teams">Teams</Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/schedual">Schedule</Link>
             </li>
             <li className="nav-item">
@@ -56,7 +63,7 @@ export const Navbar = (props) => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/formdemo5">Form Demo 4</Link>
-            </li>
+            </li> */}
             
             <li className="nav-item">
               <Link className="nav-link" to="/useMemo">useMemo</Link>
@@ -85,6 +92,15 @@ export const Navbar = (props) => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/login">login</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/bankcomp">BANK</Link>
+            </li>
+            <li className="nav-item">
+              <h3>Cart {cartstate.length}</h3>
+            </li>
+            <li className="nav-item">
+              <h3>BAl {bankState}</h3>
             </li>
             
           </ul>

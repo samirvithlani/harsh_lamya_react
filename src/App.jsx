@@ -36,6 +36,7 @@ import { ApiDemo3 } from "./components/api/ApiDemo3";
 import { Products } from "./components/Products";
 import { ThemeContext } from "./ThemeContext";
 import { ProductComp } from "./components/ProductComp";
+import { BankComponent } from "./components/BankComponent";
 
 function App() {
   var appName = "IPL";
@@ -95,6 +96,7 @@ function App() {
               <Route path="/updateuser/:id" element={<UpdateUser />}></Route>
             </Route>
             <Route path="/products" element={<ProductComp />}></Route>
+            <Route path="/bankcomp" element = {<BankComponent/>}></Route>
 
             <Route path="/login" element={<Login />}></Route>
           </Routes>
