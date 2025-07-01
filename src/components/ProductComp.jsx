@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../redux/CartSlice'
+import { fetchApi } from '../redux/ContentSlice'
 
 export const ProductComp = () => {
     //hook dispatch -- props
@@ -20,6 +21,8 @@ export const ProductComp = () => {
             <button className='btn btn-info' onClick={()=>{dispatch(addToCart({id:2,name:"iphone15",price:900}))}}>add to cart</button>
         </div>
         </div>
+
+        <button onClick={()=>{dispatch(fetchApi())}}>CALL API</button>
     </div>
   )
 }
