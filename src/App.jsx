@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -37,13 +37,32 @@ import { Products } from "./components/Products";
 import { ThemeContext } from "./ThemeContext";
 import { ProductComp } from "./components/ProductComp";
 import { BankComponent } from "./components/BankComponent";
+import { io } from "socket.io-client";
 
 function App() {
+
+  const socket = io("http://localhost:3000")
+
   var appName = "IPL";
   const [theme, settheme] = useState("light");
+  const [message, setmessage] = useState("")
+
+  const sendMessgeHandler = ()=>{
+
+    socket.emit("sendMessage",message)
+  }
+
+
+  useEffect(()=>{
+    socket.on("receiveMessage",(data)=>{
+      console.log(data)
+    })
+  },[])
 
   return (
     <div>
+      <input type="text" placeholder="Enter Message"  onChange={(event)=>{setmessage(event.target.value)}}/>
+      <button onClick={()=>{sendMessgeHandler()}}>SEND...</button>
       <ThemeContext.Provider value={{ theme, settheme }}>
         <div
         
