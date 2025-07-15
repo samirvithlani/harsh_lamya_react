@@ -122,3 +122,12 @@ store: object
 reducer: reducer is pure js funciton which accept function as object and return previous state
 action : js function which accept 2 params 
 
+npm run build
+npm i firebase-tools -g
+firebase login
+firebase init
+
+dist
+n,n,n
+
+firebase deploy

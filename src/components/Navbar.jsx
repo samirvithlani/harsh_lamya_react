@@ -96,6 +96,10 @@ export const Navbar = (props) => {
             <li className="nav-item">
               <Link className="nav-link" to="/bankcomp">BANK</Link>
             </li>
+            
+            <li className="nav-item">
+              <Link className="nav-link" to="/muibutton">muibutton</Link>
+            </li>
             <li className="nav-item">
               <h3>Cart {cartstate.length}</h3>
             </li>

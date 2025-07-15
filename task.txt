@@ -22,3 +22,20 @@ https://node5.onrender.com/product/addproducts : product array post
       "price": 20000,
       "description": "Na levai",      
 },
+
+
+ratings:
+5 excellent
+4 good
+3 average
+2 bad
+1 worst
+
+slider:
+api --produts
+-------------------------------
+
+all products
+0 -100 price
+
+switch theme

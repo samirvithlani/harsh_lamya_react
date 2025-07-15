@@ -38,10 +38,13 @@ import { ThemeContext } from "./ThemeContext";
 import { ProductComp } from "./components/ProductComp";
 import { BankComponent } from "./components/BankComponent";
 import { io } from "socket.io-client";
+import axios from "axios";
+import { MuiButton } from "./mui/MuiButton";
 
 function App() {
 
   const socket = io("http://localhost:3000")
+  //axios.defaults.baseURL = "https://node5.onrender.com";
 
   var appName = "IPL";
   const [theme, settheme] = useState("light");
@@ -116,6 +119,7 @@ function App() {
             </Route>
             <Route path="/products" element={<ProductComp />}></Route>
             <Route path="/bankcomp" element = {<BankComponent/>}></Route>
+            <Route path="/muibutton" element = {<MuiButton/>}></Route>
 
             <Route path="/login" element={<Login />}></Route>
           </Routes>
